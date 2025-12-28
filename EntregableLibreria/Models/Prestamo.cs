@@ -15,10 +15,10 @@ namespace EntregableLibreria.Models
         // Claves foráneas (Foreign Keys)
         [ForeignKey("Usuario")]
         public int UsuarioId { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual Usuario? Usuario { get; set; }
 
         [ForeignKey("Libro")]
         public int LibroId { get; set; }
-        public virtual Libro Libro { get; set; }
+        public virtual Libro? Libro { get; set; }
     }
 }
