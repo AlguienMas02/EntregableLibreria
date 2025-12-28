@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EntregableLibreria.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Lista de Usuarios";
+}
+
+<h1>Lista de Usuarios</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Registrar Nuevo Usuario</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.Email</td>
+                    <td>
+                        @if (item.Activo)
+                        {
+                                <span class="badge bg-success">Activo</span>
+                        }
+                        else
+                        {
+                                <span class="badge bg-danger">Inactivo</span>
+                        }
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-info">Editar</button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
