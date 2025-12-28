@@ -1,0 +1,29 @@
+﻿@model EntregableLibreria.Models.Prestamo
+
+@{
+    ViewData["Title"] = "Registrar Préstamo";
+}
+
+<h1>Registrar Préstamo</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="form-group mb-3">
+                <label class="control-label">Usuario Solicitante</label>
+                <select asp-for="UsuarioId" class="form-control" asp-items="ViewBag.UsuarioId"></select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label">Libro a Prestar</label>
+                <select asp-for="LibroId" class="form-control" asp-items="ViewBag.LibroId"></select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar Préstamo</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>

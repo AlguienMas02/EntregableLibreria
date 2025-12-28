@@ -20,6 +20,6 @@ namespace EntregableLibreria.Models
         public bool Activo { get; set; } = true;
 
         // Relación: Un usuario puede tener muchos préstamos
-        public virtual ICollection<Prestamo> Prestamos { get; set; }
+        public virtual ICollection<Prestamo>? Prestamos { get; set; }
     }
 }
