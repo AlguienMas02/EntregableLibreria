@@ -1,0 +1,37 @@
+﻿@model IEnumerable<EntregableLibreria.Models.Libro>
+
+@{
+    ViewData["Title"] = "Listado de Libros";
+}
+
+<h1>Catálogo de Libros</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo Libro</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ISBN)</th>
+            <th>@Html.DisplayNameFor(model => model.Titulo)</th>
+            <th>@Html.DisplayNameFor(model => model.Autor)</th>
+            <th>@Html.DisplayNameFor(model => model.Stock)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ISBN)</td>
+                <td>@Html.DisplayFor(modelItem => item.Titulo)</td>
+                <td>@Html.DisplayFor(modelItem => item.Autor)</td>
+                <td>@Html.DisplayFor(modelItem => item.Stock)</td>
+                <td>
+                    <button class="btn btn-sm btn-secondary" disabled>Editar</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
