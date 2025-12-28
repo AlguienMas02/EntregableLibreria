@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using EntregableLibreria.Data;
 using EntregableLibreria.Models;
 
-namespace BibliotecaSisenati.Controllers
+namespace EntregableLibreria.Controllers
 {
     public class LibrosController : Controller
     {

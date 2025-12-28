@@ -19,6 +19,6 @@ namespace EntregableLibreria.Models
         public int Stock { get; set; }
 
         // Relación: Un libro puede estar en muchos registros de préstamo
-        public virtual ICollection<Prestamo> Prestamos { get; set; }
+        public virtual ICollection<Prestamo>? Prestamos { get; set; }
     }
 }
